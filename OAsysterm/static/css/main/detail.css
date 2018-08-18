@@ -1,0 +1,57 @@
+.navbar p {
+    background-color: #EEE5DE;
+    width: 120px;
+    position: absolute;
+    top: 8px;
+    left: 90px;
+    text-align: center;
+    padding: 20px 1px 1px 10px;
+    border-radius: 6px 6px 0 0;
+}
+
+.caption {
+    text-align: center;
+    color: #FF7F24;
+    font-size: 1.5em;
+}
+
+.table {
+    width: 70%;
+    margin: auto;
+}
+
+#blank {
+    width: 30px;
+}
+
+.body-contents p {
+    text-align: left;
+    margin-left: 6%;
+}
+
+.approval-conments {
+    width: 70%;
+    margin: auto;
+}
+
+.table p {
+    height: 100px;
+    border: #FA8072 1px solid;
+    border-radius: 7px;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    box-shadow: 0 0 1px 1px #FA8072 inset;
+}
+
+.detail-body {
+    background-color: white;
+}
+
+.table p {
+    height: 100px;
+    border: #FA8072 1px solid;
+    border-radius: 7px;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    box-shadow: 0 0 1px 1px #FA8072 inset;
+}

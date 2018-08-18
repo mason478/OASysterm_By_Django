@@ -1,0 +1,14 @@
+.navbar p {
+    background-color: #EEE5DE;
+    width: 120px;
+    position: absolute;
+    top: 8px;
+    left: 90px;
+    text-align: center;
+    padding: 20px 1px 1px 10px;
+    border-radius: 6px 6px 0 0;
+}
+.add-form {
+    width: 60%;
+    margin: auto;
+}

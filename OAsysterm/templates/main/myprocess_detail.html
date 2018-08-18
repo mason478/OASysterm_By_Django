@@ -1,0 +1,63 @@
+{% extends "main/base.html"%}
+{% load static %}
+{% block head %}
+    <title>My processes detail</title>
+<link rel="stylesheet" href="{% static 'css/main/my_process_detail.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="navbar">
+        <p>Detail</p>
+    </div>
+    <table class="table table-bordered myprocess-detail-table">
+        <tbody>
+        <tr>
+            <th>Theme</th>
+            <td>{{ myprocess.theme }}</td>
+            <th>Level</th>
+            <td>{{ myprocess.level }}</td>
+            <th>Initial time</th>
+            <td>{{ myprocess.initial_time|date:"d M Y,H:i:s" }}</td>
+            <th>Status</th>
+            {% if myprocess.next_approver is None and myprocess.status == 'agree' %}
+            <td class="success">Passed</td>
+            {% elif myprocess.next_approver is None and myprocess.status == 'disagree' %}
+            <td class="danger">Didn't pass</td>
+            {% else %}
+            <td class="warning">Inspecting</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th id="myprocess-detail-contents-header">Contents</th>
+            <td colspan="7" id="myprocess-detail-contents">{{ myprocess.contents|safe }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <hr class="hr1">
+    {% if myprocess.processcomments_set.all %}
+    {% for pc in myprocess.processcomments_set.all %}
+    <table class="table table-bordered myprocess-detail-comments-table">
+        <tbody>
+        <tr>
+            <th id="Comment-by">Comment by <span>{{ pc.comments_author }}</span></th>
+            <td colspan="3" style="text-align: left;vertical-align: top;word-spacing: 4px">{{ pc.comments }}</td>
+        </tr>
+        <tr>
+            <th>Opinion</th>
+            <td  class="comments-opinion">{{ pc.comments_stauts }}</td>
+            <th>Time</th>
+            <td>{{ pc.comments_time|date:"d M Y,H:i:s" }}</td>
+        </tr>
+        </tbody>
+    </table>
+    {% endfor %}
+    {% endif %}
+    {% if myprocess.next_approver %}
+    <table class="table-next-approver">
+        <tr>
+            <th>Next approver:</th>
+            <td><i>{{ myprocess.next_approver }}</i> </td>
+        </tr>
+    </table>
+    {% endif %}
+
+{% endblock %}

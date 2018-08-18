@@ -1,0 +1,29 @@
+{% extends "main/base.html"%}
+{% load static %}
+{% block content %}
+{% block head %}
+    <title>Edit account</title>
+<link rel="stylesheet" href="{% static 'css/main/edit_account.css' %}">
+{% endblock %}
+    <div class="navbar">
+        <p>Edit Account</p>
+    </div>
+    <div class="edit-forms">
+        <form method="post">
+        {% csrf_token %}
+        <!--编辑账户信息.表单也有三种情况:
+        1,当前用户是管理员且编辑对象是当前用户，则可以编辑账号名、密码、真实姓名、职位、权限;
+        2,当前用户是管理员但编辑其他用户信息，则不可以改密码:,可以编辑账号名、真实姓名、职位、权限;
+        3,当前用户不是管理员，则只能修改本人密码、真实姓名-->
+        {% if user == edit_user and user.is_admin %}
+        {{ form }}
+        {% elif user != edit_user and user.is_admin %}
+        {% include "main/_edit_form1.html" %}
+        {% elif user == edit_user and not user.is_admin %}
+        {% include "main/_edit_form2.html" %}
+        {% endif %}
+
+       <p><input type="submit" class="btn btn-info btn-block" value="Confirm"> </p>
+        </form>
+    </div>
+{% endblock %}

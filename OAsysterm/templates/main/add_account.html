@@ -1,0 +1,30 @@
+{% extends "main/base.html"%}
+{% load static %}
+{% block head %}
+    <title>Add account</title>
+<link rel="stylesheet" href="{% static 'css/main/add_account.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="navbar">
+        <p>Add Account</p>
+    </div>
+    {% if user.is_admin %}
+    <div class="add-form">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.username.label_tag }}
+            <p>{{ form.username }}</p>
+
+            {{ form.realname.label_tag }}
+            <p> {{ form.realname }}</p>
+
+            {{ form.position.label_tag }}
+            <p>{{ form.position }}</p>
+            {{ form.is_admin.label_tag }}
+           {{ form.is_admin }}
+            <button class="btn btn-info btn-block">Confirm</button>
+        </form>
+    </div>
+    {% endif %}
+{% endblock %}

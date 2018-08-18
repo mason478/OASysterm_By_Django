@@ -1,0 +1,51 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block head %}
+    <title>MyProcess</title>
+<link rel="stylesheet" href="{% static 'css/main/my_process.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="navbar">
+        <p>My process</p>
+    </div>
+    {% if not myprocess %}
+    <h2>You don't have any process</h2>
+    {% else %}
+    <table class="table myprocess  table-hover">
+        <thead>
+        <tr>
+            <th scope="col" id="NO">NO.</th>
+            <th scope="col" id="ProcessID">Serial Num</th>
+            <th scope="col">Theme</th>
+            <th>Level</th>
+            <th scope="col" id="InitiatalTime">Initiatal Time</th>
+            <th scope="col" id="ArrivedTime">Approval Time</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for p in myprocess %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ p.process_serial_num }}{{ p.id }}</td>
+            <td>{{ p.theme }}</td>
+            <td>{{ p.level  }}</td>
+            <td>{{ p.initial_time|date:"d M Y,H:i:s" }}</td>
+            <td>{{ p.timestamp|date:"d M Y,H:i:s" }}</td>
+        <!-- 流程有三种状态,通过,未通过,正在审批-->
+            {% if p.next_approver  is None and p.status == 'agree' %}
+            <td><a href="{% url 'OAsysterm:my_process_detail' pk=p.pk %}"><button class="btn btn-success myprocess-btn">Passed</button></a></td>
+            {% elif p.next_approver is None and p.status == 'disagree' %}
+            <td><a href="{% url 'OAsysterm:my_process_detail' pk=p.pk %}"><button class="btn btn-danger myprocess-btn">Didn't pass</button></a></td>
+            {% else %}
+            <td><a href="{% url 'OAsysterm:my_process_detail' pk=p.pk %}"><button class="btn btn-warning myprocess-btn">Inspecting</button></a></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+    <!--实现分页-->
+    {% include "main/_pagiantion.html" %}
+{% endblock %}

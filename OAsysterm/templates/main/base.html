@@ -1,0 +1,82 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/base.css' %}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+{% for message in messages %}
+<div class="alert alert-warning">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ message }}
+</div>
+{% endfor %}
+<div class="header col-md-12 container-fluid">
+    <div class="row">
+        <div class="logo col-md-1">
+            <img src="../../static/img/logo1.png " height="100%">
+        </div>
+        <div class="company-name col-md-4">
+            <h2>WangJie Company</h2>
+            <p>OA information management system</p>
+        </div>
+        <div class="col-md-7">
+            <ul class="list-unstyled list-inline user-list">
+                <li>User:<span class="username">{{ user.real_name }}</span></li>
+                <li>Position:<span class="position-name">{{ user.position.position_name }}</span></li>
+                <li style="border-right: none"><a href="{% url 'OAsysterm:logout' %}">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1 aside">
+            <div class="container-fluid">
+                <div class="row aside-button">
+                    <a href="{% url 'OAsysterm:index' %}">
+                        <div class="col-md-12 aside-button ">
+                            <span class="glyphicon glyphicon-pencil"></span>Approval Process
+                        </div>
+                    </a>
+
+                    <a href="{% url 'OAsysterm:start_process' %}">
+                        <div class="col-md-12 aside-button ">
+                            <span class="glyphicon glyphicon-plus-sign"></span>Start a Process
+                        </div>
+                    </a>
+                    <a href="{% url 'OAsysterm:my_processes' %}">
+                        <div class="col-md-12  ">
+                            <span class="glyphicon glyphicon-asterisk"></span>My Process
+                        </div>
+                    </a>
+                    <a href="{% url 'OAsysterm:account_manage' %}">
+                        <div class="col-md-12 aside-button ">
+                            <span class="glyphicon glyphicon-folder-open"></span> Systerm Manage
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+<div class="col-md-11 content">
+        {% block content %}
+
+        {% endblock %}
+</div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>

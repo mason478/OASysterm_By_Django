@@ -1,0 +1,81 @@
+.navbar p {
+    background-color: #EEE5DE;
+    width: 120px;
+    position: absolute;
+    top: 8px;
+    left: 90px;
+    text-align: center;
+    padding: 20px 1px 1px 10px;
+    border-radius: 6px 6px 0 0;
+}
+
+.myprocess-detail-table {
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#myprocess-detail-contents {
+    text-align: left;
+    vertical-align: top;
+    height: 100px;
+    overflow: scroll;
+}
+
+#myprocess-detail-contents-header {
+    vertical-align: middle;
+}
+
+#Comment-by {
+    width: 112px;
+}
+
+.myprocess-detail-comments-table {
+    margin: auto;
+    margin-top: 30px;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.myprocess-detail-comments-table th span {
+    font-style: italic;
+    color: #ff8080;
+    font-size: 1.1em;
+}
+
+.hr1 {
+    height: 1px;
+    border: none;
+    border-top: 1px dashed #0066CC;
+    width: 52%;
+}
+
+.table-next-approver {
+    width: 50%;
+    margin: auto;
+}
+
+.table-next-approver th {
+    width: 13%;
+}
+
+.table-next-approver td i {
+    color: #FF7F24;
+    font-size: 1.2em;
+}
+
+.comments-opinion {
+    width: 155px;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.table tr {
+    text-align: center;
+}
+

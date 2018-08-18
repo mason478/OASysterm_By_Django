@@ -1,0 +1,84 @@
+/*base*/
+.header {
+    border-bottom: #51a2ee 2px solid;
+    height: 120px;
+    width: 100%;
+    box-shadow: 0 0 1px 0 #51a2ee;
+    background-color: lightgray;
+}
+
+.aside {
+    border-right: #CDC8B1 solid 2px;
+    height:auto;
+    padding: 0 1px;
+}
+
+.content {
+    height: 100%;
+    float: right;
+    background-color: #EEE5DE;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow: scroll;
+}
+
+.username{
+    color: #ff5050;
+    padding-left: 4px;
+    font-size: 1.2em;
+}
+.position-name{
+    color:#5050ff ;
+    padding-left: 4px;
+}
+
+.logo {
+    float: left;
+    height: 120px;
+}
+
+.company-name p {
+    letter-spacing: 1.5px;
+    padding-top: 1em;
+    margin-left: 1.5em;
+}
+
+.company-name h2 {
+    margin-top: 1em;
+    margin-left: 0.9em;
+}
+
+.user-list {
+    padding-left: 60%;
+    margin-top: 80px;
+    font-size: 1.3em;
+}
+
+.user-list li {
+    padding-right: 10px;
+    border-right: gray 1.5px solid;
+    margin-left: 8px;
+    display: inline;
+}
+
+
+.aside-button div {
+    border: #7abbf8 2px solid;
+    text-align: left;
+    color: white;
+    font-size: 1em;
+    padding:0.85em 0 0.85em 0.14em;
+    margin-top: 0.6em;
+
+    background-color: #7abbf8;
+    border-radius: 2px;
+    box-shadow: 0.5px 0.5px 2px 0 lightgray;
+
+}
+
+body {
+    background-color: #FFFAFA;
+}
+.navbar {
+    background-color: #7abbf8;
+}

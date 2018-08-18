@@ -1,0 +1,30 @@
+
+.startprocess {
+    width: 65%;
+    margin: auto;
+    padding-top: 80px;
+    margin-bottom: 80px;
+}
+
+.startprocess p {
+    margin-bottom: 0px;
+
+}
+
+.theme {
+    border: #FF7F24 1px solid;
+}
+
+
+.form-theme {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 80%;
+
+}
+
+.form-level {
+    display: inline-block;
+    width: 10%;
+    float: right;
+}

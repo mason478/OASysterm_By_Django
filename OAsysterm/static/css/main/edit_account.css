@@ -1,0 +1,19 @@
+.navbar p {
+    background-color: #EEE5DE;
+    width: 120px;
+    position: absolute;
+    top: 8px;
+    left: 90px;
+    text-align: center;
+    padding: 20px 1px 1px 10px;
+    border-radius: 6px 6px 0 0;
+}
+
+.edit-forms{
+     width: 70%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+.btn{
+    margin-top: 2em;
+}

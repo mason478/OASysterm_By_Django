@@ -1,0 +1,65 @@
+.navbar p {
+    background-color: #EEE5DE;
+    width: 120px;
+    position: absolute;
+    top: 8px;
+    left: 90px;
+    text-align: center;
+    padding: 20px 1px 1px 10px;
+    border-radius: 6px 6px 0 0;
+}
+
+.table th {
+    text-align: center;
+
+}
+.table tr {
+    text-align: center;
+}
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.table {
+    width: 70%;
+    margin: auto;
+}
+.process-table {
+    border-radius: 20px;
+    background-color: #FF7F24;
+}
+
+#InitiatalTime {
+    width: 15%;
+}
+
+#ArrivedTime {
+    width: 15%;
+}
+
+#Initiator {
+    width: 18%;
+}
+
+#ProcessID {
+    width: 15%;
+}
+
+#NO {
+    width: 10%;
+}
+
+#approval-info-sign {
+    width: 8%;
+}
+
+.process-table td {
+    text-align: center;
+}
+.mypagination-nav{
+    margin-top: 40px;
+}
+.pagination{
+    float: right;
+    margin-right: 15%;
+}

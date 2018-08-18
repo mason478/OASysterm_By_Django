@@ -1,0 +1,51 @@
+{% extends "main/base.html"%}
+
+{% load static %}
+
+{% block head %}
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main/index.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="navbar">
+        <p>Pending process</p>
+    </div>
+    <div>
+        {% if not process %}
+        <h2>There is no pending process</h2>
+        {% else %}
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th scope="col" id="NO">NO.</th>
+                <th scope="col" id="ProcessID">Serial Num</th>
+                <th scope="col">Theme</th>
+                <th scope="col" id="Initiator">Initiator</th>
+                <th scope="col" id="InitiatalTime">Initiatal Time</th>
+                <th scope="col" id="ArrivedTime">Arrived Time</th>
+                <th scope="col" id="approval-info-sign"></th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for p in process %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ p.process_serial_num }}{{ p.id }}</td>
+                <td>{{ p.theme }}</td>
+                <td>{{ p.author.real_name }}</td>
+                <td>{{ p.initial_time|date:"d M Y,H:i:s" }}</td>
+                <td>{{ p.timestamp|date:"d M Y,H:i:s" }}</td>
+                <td><a href="{% url "OAsysterm:detail" pk=p.id %}"><span
+                        class="glyphicon glyphicon-info-sign"></span> Detail</a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+
+<!--实现分页-->
+{% include "main/_pagiantion.html" %}
+
+{% endblock %}
