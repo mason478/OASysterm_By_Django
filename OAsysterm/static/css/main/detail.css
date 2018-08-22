@@ -40,19 +40,8 @@
 .approval-conments {
     width: 70%;
     margin: auto;
-}
-
-
+}   
 
 .detail-body {
     background-color: white;
-}
-
-.table p {
-    height: 100px;
-    border: #FA8072 1px solid;
-    border-radius: 7px;
-    padding-left: 1em;
-    padding-top: 0.5em;
-    box-shadow: 0 0 1px 1px #FA8072 inset;
 }
