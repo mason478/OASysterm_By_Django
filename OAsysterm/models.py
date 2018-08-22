@@ -4,10 +4,9 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 from django.utils import timezone
 
 
-
 # 职位,分别为'Staff','Manager','Boss'
 class Position(models.Model):
-    position_name=models.CharField(max_length=20)
+    position_name = models.CharField(max_length=20)
 
     @staticmethod
     def insert_positions():
@@ -38,7 +37,7 @@ class MyUser(AbstractBaseUser):
     username = models.CharField(max_length=30, unique=True, db_index=True)
     password = models.CharField(max_length=128)
     real_name = models.CharField(max_length=20, default=None)
-    position=models.ForeignKey(Position,on_delete=models.CASCADE,null=True)
+    position = models.ForeignKey(Position, on_delete=models.CASCADE, null=True)
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['real_name']
     is_active = models.BooleanField(default=True)
@@ -78,7 +77,7 @@ class Processes(models.Model):
     #  审批一次,timestamp改变一次
     timestamp = models.DateTimeField(default=timezone.now())
     # 下一个审批人的名字,'None'表示走到尽头,审批完成
-    next_approver = models.CharField(max_length=20, default=None,null=True)
+    next_approver = models.CharField(max_length=20, default=None, null=True)
     #  序列号
     process_serial_num = models.CharField(max_length=128, default=datetime.utcnow().strftime('%Y%m%d%H%M%S'))
     # level:High,Normal
@@ -89,14 +88,8 @@ class Processes(models.Model):
 
 
 class ProcessComments(models.Model):
-    comments=models.TextField()
-    comments_stauts=models.CharField(max_length=20)  #  同意或者不同意
-    comments_time=models.DateTimeField(default=timezone.now())
-    comments_author=models.CharField(max_length=20)
-    process=models.ForeignKey(Processes,on_delete=models.CASCADE)
-
-
-
-
-
-
+    comments = models.TextField()
+    comments_stauts = models.CharField(max_length=20)  # 同意或者不同意
+    comments_time = models.DateTimeField(default=timezone.now())
+    comments_author = models.CharField(max_length=20)
+    process = models.ForeignKey(Processes, on_delete=models.CASCADE)

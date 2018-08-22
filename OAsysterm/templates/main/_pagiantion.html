@@ -1,25 +1,25 @@
 {% if is_paginated %}
-<nav aria-label="Page navigation" class="mypagination-nav">
-    <ul class="pagination  ">
-        <li {% if not page_obj.has_previous %} class="disabled" {% endif %}>
-            <a href="{% if page_obj.has_previous %}?page={{ page_obj.previous_page_number }}{% else %}#{% endif %}"
-               aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-            </a>
-        </li>
-        {% for p in paginator.page_range %}
-        {% if p == page_obj.number %}
-        <li class="active"><a href="?page={{ p }}">{{ p }}</a></li>
-        {% else %}
-        <li><a href="?page={{ p }}">{{ p }}</a></li>
-        {% endif %}
-        {% endfor %}
-        <li {% if not page_obj.has_next %} class="disabled" {% endif %}>
-            <a href="{% if page_obj.has_next %}?page={{ page_obj.next_page_number }}{% else %}#{% endif %}"
-               aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-            </a>
-        </li>
-    </ul>
-</nav>
+    <nav aria-label="Page navigation" class="mypagination-nav">
+        <ul class="pagination  ">
+            <li {% if not page_obj.has_previous %} class="disabled" {% endif %}>
+                <a href="{% if page_obj.has_previous %}?page={{ page_obj.previous_page_number }}{% else %}#{% endif %}"
+                   aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            {% for p in paginator.page_range %}
+                {% if p == page_obj.number %}
+                    <li class="active"><a href="?page={{ p }}">{{ p }}</a></li>
+                {% else %}
+                    <li><a href="?page={{ p }}">{{ p }}</a></li>
+                {% endif %}
+            {% endfor %}
+            <li {% if not page_obj.has_next %} class="disabled" {% endif %}>
+                <a href="{% if page_obj.has_next %}?page={{ page_obj.next_page_number }}{% else %}#{% endif %}"
+                   aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 {% endif %}
