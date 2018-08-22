@@ -22,13 +22,13 @@
         <tbody>
         <tr class="detail-body">
             <td> </td>
-            <td>{{ process.user.username }}</td>
+            <td>{{ process.author.username }}</td>
             <td>{{ process.level }}</td>
             <td>{{ process.initial_time|date:"d M Y,H:i:s" }}</td>
         </tr>
         <tr >
             <th rowspan="3" scope="row" class="head-contents">Contents</th>
-            <td rowspan="3" colspan="3" class="body-contents"><p>{{ process.contents|safe }}</p></td>
+            <td  colspan="3" class="body-contents" >{{ process.contents|safe }}</td>
         </tr>
         </tbody>
     </table>

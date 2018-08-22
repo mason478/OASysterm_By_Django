@@ -18,16 +18,24 @@
 .table {
     width: 70%;
     margin: auto;
+    margin-bottom: 2em;
+    border-bottom: #FF7F24 1px solid;
 }
 
 #blank {
     width: 30px;
 }
 
-.body-contents p {
+.body-contents{
     text-align: left;
     margin-left: 6%;
+    border: #FF7F24 1px solid;
+
 }
+.head-contents{
+    border: #FF7F24 1px solid;
+}
+
 
 .approval-conments {
     width: 70%;
