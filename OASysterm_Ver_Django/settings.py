@@ -28,7 +28,7 @@ SECRET_KEY = 'af^q8vb%n3^vckv-=t_y0$d_^5ft)(tl0u-m6)u)-*-&gl7k3)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['oasysterm-by-django.herokuapp.com']
 
 # Application definition
 
