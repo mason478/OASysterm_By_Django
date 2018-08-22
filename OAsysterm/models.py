@@ -19,7 +19,7 @@ class Position(models.Model):
 
 
 class MyUserManager(BaseUserManager):
-    def create_user(self, username, password, **extra_fields):
+    def create_user(self, username, password, **extra_fields):#u=models.MyUser(username='wangjie',real_name='WangJie',position='Boss'
         now = timezone.now()
         user = self.model(username=username, last_login=now, **extra_fields)
         user.set_password(password)

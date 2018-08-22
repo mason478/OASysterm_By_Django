@@ -48,8 +48,8 @@
       <file leaf-file-name="_pagiantion.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OAsysterm/templates/main/_pagiantion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="253">
+              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -57,8 +57,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OAsysterm/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+            <state relative-caret-position="943">
+              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -66,14 +66,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OASysterm_Ver_Django/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+            <state relative-caret-position="69">
+              <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
               <folding>
                 <element signature="e#319#328#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OAsysterm/static/css/main/base.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-184">
+              <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -164,16 +173,16 @@
         <option value="$PROJECT_DIR$/../OASysterm/mysite/app/templates/_macro.html" />
         <option value="$PROJECT_DIR$/OAsysterm/templates/main/myprocess_detail.html" />
         <option value="$PROJECT_DIR$/OAsysterm/templates/main/_pagiantion.html" />
-        <option value="$PROJECT_DIR$/OAsysterm/models.py" />
         <option value="$PROJECT_DIR$/OAsysterm/templates/main/index.html" />
-        <option value="$PROJECT_DIR$/OAsysterm/static/css/main/base.css" />
         <option value="$PROJECT_DIR$/OAsysterm/templates/main/account_manage.html" />
         <option value="$PROJECT_DIR$/OAsysterm/urls.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/OAsysterm/admin.py" />
-        <option value="$PROJECT_DIR$/OASysterm_Ver_Django/settings.py" />
         <option value="$PROJECT_DIR$/OASysterm_Ver_Django/wsgi.py" />
         <option value="$PROJECT_DIR$/OAsysterm/templates/main/base.html" />
+        <option value="$PROJECT_DIR$/OAsysterm/models.py" />
+        <option value="$PROJECT_DIR$/OASysterm_Ver_Django/settings.py" />
+        <option value="$PROJECT_DIR$/OAsysterm/static/css/main/base.css" />
       </list>
     </option>
   </component>
@@ -222,18 +231,15 @@
               <item name="OASysterm_Ver_Django" type="462c0819:PsiDirectoryNode" />
               <item name="OAsysterm" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OASysterm_Ver_Django" type="b2602c69:ProjectViewProjectNode" />
               <item name="OASysterm_Ver_Django" type="462c0819:PsiDirectoryNode" />
               <item name="OAsysterm" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OASysterm_Ver_Django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OASysterm_Ver_Django" type="462c0819:PsiDirectoryNode" />
-              <item name="OASysterm_Ver_Django" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -472,7 +478,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-4" width="1311" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
@@ -480,7 +485,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.18267223" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24247226" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29001585" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1884058" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
@@ -725,13 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OAsysterm/static/css/main/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OAsysterm/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-276">
@@ -741,13 +739,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../OASysterm/mysite/app/templates/_macro.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OAsysterm/templates/main/_pagiantion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
@@ -763,16 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-207">
           <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OAsysterm/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -817,13 +798,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OAsysterm/templates/main/_pagiantion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OAsysterm/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OASysterm_Ver_Django/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        <state relative-caret-position="69">
+          <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
           <folding>
             <element signature="e#319#328#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OAsysterm/static/css/main/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-184">
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
         </state>
       </provider>
     </entry>

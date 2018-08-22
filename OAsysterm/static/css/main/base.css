@@ -5,7 +5,6 @@
     width: 100%;
     box-shadow: 0 0 1px 0 #51a2ee;
     background-color: lightgray;
-    overflow: scroll;
 }
 
 .aside {
@@ -50,7 +49,8 @@
 }
 
 .user-list {
-    padding-left: 60%;
+    width: auto;
+    padding-left: 40%;
     margin-top: 80px;
     font-size: 1.3em;
 }
@@ -73,7 +73,6 @@
     background-color: #7abbf8;
     border-radius: 2px;
     box-shadow: 0.5px 0.5px 2px 0 lightgray;
-
 }
 
 body {
