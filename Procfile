@@ -1,1 +1,1 @@
-web: gunicorn myproject.wsgi --log-file -
+web: gunicorn OASysterm_Ver_Django.wsgi --log-file -

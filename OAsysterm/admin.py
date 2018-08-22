@@ -4,8 +4,8 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django.contrib.auth.admin import UserAdmin
 from .models import MyUser,Processes
 
-'''
-class UserCreationForm(forms.ModelForm):
+
+'''class UserCreationForm(forms.ModelForm):
     """A form for creating new users."""
     class Meta:
         model=MyUser

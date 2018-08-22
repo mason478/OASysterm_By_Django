@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import dj_database_url
+
+# Update database configuration with $DATABASE_URL.
+db_form_env = dj_database_url.config(conn_max_age=500)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -85,7 +90,8 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
+#  Update database configuration with $DATABASE_URL
+DATABASES['default'].update(db_form_env)
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
@@ -120,6 +126,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/index/'
 LOGIN_URL = '/accounts/login/'
@@ -127,3 +136,8 @@ AUTH_USER_MODEL = 'OAsysterm.MyUser'
 #   控制会话超时时间10分钟,如果10分钟以内没有任何操作,则跳转至登陆页
 SESSION_EXPIRE_SECONDS = 600
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
